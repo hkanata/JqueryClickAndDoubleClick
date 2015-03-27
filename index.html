@@ -1,0 +1,18 @@
+Include Jquery Library
+<a href='javascript:void(0);' rel='87' id='my-id'>Test</a>
+
+<script>
+	$("body").on("click", "#my-id", function(e) {
+		e.preventDefault();
+
+		var id = $(this).attr("rel");
+		console.log('This is my id from single click ' + id);
+
+	}).on("dblclick", function(e){
+		e.preventDefault();
+		
+		var id = e.target.attributes[0].value;
+		console.log('This is my id from double click ' + id);
+		
+	});
+</script>
